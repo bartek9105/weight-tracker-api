@@ -6,7 +6,7 @@ exports.addStats = async (req, res, next) => {
     await stats.save()
     res.send({ success: true })
   } catch (error) {
-    console.log(error)
+    next(error)
   }
 }
 
